@@ -1,0 +1,9 @@
+C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\bin\Debug\kenpo31GenerationTool.exe.config
+C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\bin\Debug\kenpo31GenerationTool.exe
+C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\bin\Debug\kenpo31GenerationTool.pdb
+C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.csproj.AssemblyReference.cache
+C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.Properties.Resources.resources
+C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.csproj.GenerateResource.cache
+C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.csproj.CoreCompileInputs.cache
+C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.exe
+C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.pdb
