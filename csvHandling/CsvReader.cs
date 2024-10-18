@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 
 namespace kenpo31GenerationTool.csvHandling
 {
@@ -21,18 +22,28 @@ namespace kenpo31GenerationTool.csvHandling
 
 			try
 			{
-				// csvファイルを開く
-				using (StreamReader sr = new StreamReader(filePath))
+				// Shift_jisでcsvファイルを開く
+				using (StreamReader sr = new StreamReader(filePath, Encoding.GetEncoding("shift_jis")))
 				{
 					string line;
+					int row = 0;
 
 					// 1行ずつ読み込み
 					while ((line = sr.ReadLine()) != null)
 					{
+
+						// 1行目はヘッダとしてスキップ
+						if (row == 0)
+						{
+							row++;
+							continue;
+						}
+
+
 						// 各行カンマで分割して配列にする
 						string[] fields = line.Split(',');
 
-						// 配列をリストに追加
+						// レコードをリストに追加
 						records.Add(fields);
 					}
 				}
@@ -71,6 +82,12 @@ namespace kenpo31GenerationTool.csvHandling
 			return true;
 
 		}
+
+		/// <summary>
+		/// レコードのバリデーションチェック
+		/// </summary>
+		/// <param name="record">csvファイルのレコード</param>
+		/// <returns>バリデーション結果</returns>
 
 		public bool ValidateRecord(string[] record)
 		{
