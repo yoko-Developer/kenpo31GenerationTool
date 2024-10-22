@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="csvHandling\CsvReader.cs" />
+    <Compile Include="models\FI_JRK_0004Model.cs" />
     <Compile Include="ui\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
