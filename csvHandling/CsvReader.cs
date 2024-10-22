@@ -40,11 +40,22 @@ namespace kenpo31GenerationTool.csvHandling
 						}
 
 
-						// 各行カンマで分割して配列にする
+						// 各行カンマで分割してFI_JRK_0004オブジェクトにマップ
 						string[] fields = line.Split(',');
 
-						// レコードをリストに追加
-						records.Add(fields);
+						if (ValidateRecord(fields))
+						{
+
+
+							// レコードをリストに追加
+							records.Add(fields); 
+						}
+						else
+						{
+							throw new Exception($"無効なレコードが見つかりました：{line}");
+						}
+					
+	
 					}
 				}
 			}
@@ -108,7 +119,7 @@ namespace kenpo31GenerationTool.csvHandling
 			// 3. 市町村コードの（5桁）バリデーション
 			if (string.IsNullOrEmpty(record[9]) || record[9].Length != 5) return false;
 
-			// その他のバリデーションチェック性別コードが不正
+			// 4. 性別コードのバリデーション
 			if (!IsValidGenderCode(record[5])) return false;
 
 			// 全てのバリデーションを通過したらtrueを返す

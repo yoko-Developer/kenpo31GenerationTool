@@ -1,18 +1,20 @@
-﻿using System;
+﻿using kenpo31GenerationTool.csvHandling; // CsvReaderの名前空間
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using kenpo31GenerationTool.csvHandling; // CsvReaderの名前空間
 
 namespace kenpo31GenerationTool
 {
 	public partial class Form1 : Form
 	{
 		private CsvReader csvReader = new CsvReader();
+		private DataGridView dataGridView;
 
 		public Form1()
 		{
 			InitializeComponent();
+			this.WindowState = FormWindowState.Normal;
 		}
 
 		/// <summary>
@@ -20,26 +22,30 @@ namespace kenpo31GenerationTool
 		/// </summary>
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			// 必要に応じて初期化処理を追加
-			txtFilePath.Text = "FI_JRK_0004.csv のパスを入力または参照してください";
-			txtFilePath.ForeColor = System.Drawing.Color.Gray;
+			dataGridView = new DataGridView
+			{
+				// フォーム全体を使う
+				Dock = DockStyle.Fill
+			};
+			this.Controls.Add(dataGridView);
+
+			// 各コンポーネントの配置を設定
+			txtFilePath.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+
+			btnBrowse.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+
+			btnOK.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+
+			btnConvert.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+
+			// フォームロード時にプレースホルダを設定
+			SetPlaceholder();
 		}
 
 		/// <summary>
-		/// 
+		/// 参照ボタンをクリックした際のイベントハンドラ
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void TxtFilePath_TextChanged(object sender, EventArgs e)
-		{
-			// テキストが変更されたときに必要な処理をここに追加
-			// 例えば、入力されたファイルパスのバリデーションなど
-		}
-
-		/// <summary>
-		/// ファイル選択ボタンをクリックした際のイベントハンドラ
-		/// </summary>
-		private void btnBrowse_Click(object sender, EventArgs e)
+		private void BtnBrowse_Click(object sender, EventArgs e)
 		{
 			OpenFileDialog openFileDialog = new OpenFileDialog
 			{
@@ -55,6 +61,14 @@ namespace kenpo31GenerationTool
 				// 通常のテキストカラーに戻す
 				txtFilePath.ForeColor = System.Drawing.Color.Black;
 			}
+		}
+
+		/// <summary>
+		/// OKボタンをクリックした際のイベントハンドラ
+		/// </summary>
+		private void btnOK_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("OKボタンがクリックされました。", "確認", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 
 		/// <summary>
@@ -78,7 +92,17 @@ namespace kenpo31GenerationTool
 				if (records.Count > 0)
 				{
 					// ヘッダチェック
-					string[] expectedHeaders = { "要求レコード番号", "個人番号", "照会結果氏名" /* ... 他のヘッダ ... */ };
+					string[] expectedHeaders = {
+						"要求レコード番号", "個人番号", "照会結果氏名",
+						"照会結果生年月日", "照会結果性別コード", "照会結果性別",
+						"照会結果住所", "市町村コード", "対象者識別情報",
+						"照会処理結果コード", "照会処理結果", "照会結果レコード数",
+						"照会結果レコード連番", "異動有無コード", "異動有無",
+						"生存状況コード", "生存状況", "変更状況コード",
+						"変更状況", "異動事由コード", "異動事由",
+						"異動年月日", "照会結果氏名外字数", "照会結果住所外字数",
+						"不参加団体対象フラグ", "不参加団体対象要因"
+					};
 					if (!csvReader.ValidateHeaders(records[0], expectedHeaders))
 					{
 						MessageBox.Show("CSVファイルのヘッダが不正です。", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -95,6 +119,9 @@ namespace kenpo31GenerationTool
 						}
 					}
 
+					// DataGridViewにデータをバインド	
+					dataGridView.DataSource = records.ConvertToDataTable(); // 追加: recordsをDataTableに変換して表示
+
 					MessageBox.Show("CSVファイルの読み込みとバリデーションが成功しました。", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				}
 				else
@@ -105,6 +132,18 @@ namespace kenpo31GenerationTool
 			catch (Exception ex)
 			{
 				MessageBox.Show($"エラーが発生しました: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		/// <summary>
+		/// プレースホルダの定義
+		/// </summary>
+		private void SetPlaceholder()
+		{
+			if (string.IsNullOrWhiteSpace(txtFilePath.Text))
+			{
+				txtFilePath.Text = "FI_JRK_0004.csv のパスを入力または参照してください";
+				txtFilePath.ForeColor = Color.Gray; // プレースホルダの色
 			}
 		}
 
@@ -121,15 +160,36 @@ namespace kenpo31GenerationTool
 		}
 
 		/// <summary>
-		/// テキストボックスからフォーカスが外れたときにプレースホルダを表示
+		/// テキストボックスからフォーカスが外れたときにプレースホルダを再表示
 		/// </summary>
 		private void txtFilePath_Leave(object sender, EventArgs e)
 		{
 			if (string.IsNullOrWhiteSpace(txtFilePath.Text))
 			{
-				txtFilePath.Text = "FI_JRK_0004.csv のパスを入力または参照してください";
-				txtFilePath.ForeColor = System.Drawing.Color.Gray; // プレースホルダ用のグレー色にする
+				SetPlaceholder(); // プレースホルダを再設定
 			}
+		}
+	}
+
+	// ヘルパークラス: string[]をDataTableに変換するメソッドを追加
+	public static class Extensions
+	{
+		public static System.Data.DataTable ConvertToDataTable(this List<string[]> records)
+		{
+			var dataTable = new System.Data.DataTable();
+			// ヘッダー行を追加
+			for (int i = 0; i < records[0].Length; i++)
+			{
+				dataTable.Columns.Add($"Column{i + 1}"); // 列名をColumn1, Column2, ...に設定
+			}
+
+			// データ行を追加
+			foreach (var record in records)
+			{
+				dataTable.Rows.Add(record);
+			}
+
+			return dataTable;
 		}
 	}
 }
