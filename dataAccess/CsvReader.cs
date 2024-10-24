@@ -22,7 +22,7 @@ namespace kenpo31GenerationTool.csvHandling
 
 			try
 			{
-				// Shift_jisでcsvファイルを開く
+				// Shift_JISでcsvファイルを開く
 				using (StreamReader sr = new StreamReader(filePath, Encoding.GetEncoding("shift_jis")))
 				{
 					string line;
@@ -39,23 +39,54 @@ namespace kenpo31GenerationTool.csvHandling
 							continue;
 						}
 
-
-						// 各行カンマで分割してFI_JRK_0004オブジェクトにマップ
+						// 各行カンマで分割
 						string[] fields = line.Split(',');
 
-						if (ValidateRecord(fields))
+						// CsvRecordオブジェクトを作成
+						CsvRecord record = new CsvRecord
 						{
-
-
+							// 各フィールドをCsvRecordのプロパティにマップ
+							RecordNumber = fields[0],
+							PersonalNumber = fields[1],
+							Name = fields[2],
+							KanaName = fields[3],
+							Birthdate = fields[4],
+							GenderCode = fields[5],
+							Gender = fields[6],
+							Address = fields[7],
+							Identifier = fields[8],
+							MunicipalityCode = fields[9],
+							ProcessingResultCode = fields[10],
+							ProcessingResult = fields[11],
+							RecordCount = fields[12],
+							RecordSequenceNumber = fields[13],
+							MovementCode = fields[14],
+							Movement = fields[15],
+							LifeStatusCode = fields[16],
+							LifeStatus = fields[17],
+							ChangeStatusCode = fields[18],
+							ChangeStatus = fields[19],
+							MovementReasonCode = fields[20],
+							MovementReason = fields[21],
+							MovementDate = fields[22],
+							NameGaijiCount = fields[23],
+							AddressGaijiCount = fields[24],
+							NonParticipantFlag = fields[25],
+							NonParticipantReason = fields[26]
+						};
+						
+						// バリデーションチェック
+						if (!ValidateRecord(fields))
+						{
 							// レコードをリストに追加
-							records.Add(fields); 
+							records.Add(fields);
 						}
-						else
-						{
-							throw new Exception($"無効なレコードが見つかりました：{line}");
-						}
-					
-	
+						//else
+						//{
+						//	throw new Exception($"無効なレコードが見つかりました：{line}");
+						//}
+
+						row++;
 					}
 				}
 			}
@@ -66,6 +97,55 @@ namespace kenpo31GenerationTool.csvHandling
 
 			return records;
 		}
+
+
+		/// <summary>
+		/// CsvRecordリストをstring[]リストに変換するメソッド
+		/// </summary>
+		/// <param name="csvRecords">CsvRecordのリスト</param>
+		/// <returns>string[]のリスト</returns>
+		public List<string[]> ConvertToStringArray(List<CsvRecord> csvRecords)
+		{
+			List<string[]> result = new List<string[]>();
+
+			foreach (var record in csvRecords)
+			{
+				// CsvRecordのプロパティをstring[]に変換
+				result.Add(new string[]
+				{
+					record.RecordNumber,
+					record.PersonalNumber,
+					record.Name,
+					record.KanaName,
+					record.Birthdate,
+					record.GenderCode,
+					record.Gender,
+					record.Address,
+					record.Identifier,
+					record.MunicipalityCode,
+					record.ProcessingResultCode,
+					record.ProcessingResult,
+					record.RecordCount,
+					record.RecordSequenceNumber,
+					record.MovementCode,
+					record.Movement,
+					record.LifeStatusCode,
+					record.LifeStatus,
+					record.ChangeStatusCode,
+					record.ChangeStatus,
+					record.MovementReasonCode,
+					record.MovementReason,
+					record.MovementDate,
+					record.NameGaijiCount,
+					record.AddressGaijiCount,
+					record.NonParticipantFlag,
+					record.NonParticipantReason
+				});
+			}
+
+			return result;
+		}
+
 
 		/// <summary>
 		/// csvファイルのヘッダ行チェックメソッド
