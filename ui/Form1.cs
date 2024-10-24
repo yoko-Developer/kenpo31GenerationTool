@@ -1,6 +1,7 @@
 ﻿using kenpo31GenerationTool.csvHandling; // CsvReaderの名前空間
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -14,7 +15,6 @@ namespace kenpo31GenerationTool
 		public Form1()
 		{
 			InitializeComponent();
-			this.WindowState = FormWindowState.Normal;
 		}
 
 		/// <summary>
@@ -64,18 +64,65 @@ namespace kenpo31GenerationTool
 		}
 
 		/// <summary>
+		/// CSVファイルからデータを読み込み、DataGridViewに表示する
+		/// </summary>
+		/// <param name="records">読み込んだCSVのレコードリスト</param>
+		private void DisplayCsvData(List<string[]> records)
+		{
+			var dataTable = new DataTable();
+			if (records.Count > 0)
+			{
+				// ヘッダー行を追加
+				for (int i = 0; i < records[0].Length; i++)
+				{
+					dataTable.Columns.Add($"Column{i + 1}");
+				}
+
+				// データ行を追加
+				foreach (var record in records)
+				{
+					dataTable.Rows.Add(record);
+				}
+			}
+			dataGridView.DataSource = dataTable;
+		}
+
+
+		/// <summary>
 		/// OKボタンをクリックした際のイベントハンドラ
 		/// </summary>
-		private void btnOK_Click(object sender, EventArgs e)
+		private void BtnOk_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("OKボタンがクリックされました。", "確認", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			// テキストボックスからファイルパスを取得
+			string filePath = txtFilePath.Text;
+
+			if (string.IsNullOrWhiteSpace(filePath))
+			{
+				MessageBox.Show("ファイルパスが指定されていません。参照ボタンでCSVファイルを選択してください。");
+				return;
+			}
+
+			try
+			{
+				// CSVファイルを読み込む
+				List<string[]> records = csvReader.ReadCsv(filePath);
+
+				// 読み込んだデータをDataGridViewに表示
+				DisplayCsvData(records);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show($"エラーが発生しました: {ex.Message}");
+			}
+
 		}
 
 		/// <summary>
 		/// 変換開始ボタンをクリックした際のイベントハンドラ
 		/// </summary>
-		private void btnConvert_Click(object sender, EventArgs e)
+		private void BtnConvert_Click(object sender, EventArgs e)
 		{
+			
 			string filePath = txtFilePath.Text;
 
 			if (string.IsNullOrEmpty(filePath) || filePath == "FI_JRK_0004.csv のパスを入力または参照してください")
@@ -104,6 +151,7 @@ namespace kenpo31GenerationTool
 						"不参加団体対象フラグ", "不参加団体対象要因"
 					};
 					if (!csvReader.ValidateHeaders(records[0], expectedHeaders))
+
 					{
 						MessageBox.Show("CSVファイルのヘッダが不正です。", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 						return;
@@ -120,7 +168,7 @@ namespace kenpo31GenerationTool
 					}
 
 					// DataGridViewにデータをバインド	
-					dataGridView.DataSource = records.ConvertToDataTable(); // 追加: recordsをDataTableに変換して表示
+					DisplayCsvData(records);
 
 					MessageBox.Show("CSVファイルの読み込みとバリデーションが成功しました。", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				}
@@ -136,7 +184,7 @@ namespace kenpo31GenerationTool
 		}
 
 		/// <summary>
-		/// プレースホルダの定義
+		/// プレースホルダの設定
 		/// </summary>
 		private void SetPlaceholder()
 		{
@@ -169,9 +217,19 @@ namespace kenpo31GenerationTool
 				SetPlaceholder(); // プレースホルダを再設定
 			}
 		}
+
+		private void txtFilePath_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void lblFilePath_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 
-	// ヘルパークラス: string[]をDataTableに変換するメソッドを追加
+	// ヘルパークラス: CsvRecordをDataTableに変換するメソッドを追加
 	public static class Extensions
 	{
 		public static System.Data.DataTable ConvertToDataTable(this List<string[]> records)
