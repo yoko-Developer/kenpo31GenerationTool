@@ -10,7 +10,7 @@ namespace kenpo31GenerationTool
 	public partial class Form1 : Form
 	{
 		private CsvReader csvReader = new CsvReader();
-		private DataGridView dataGridView;
+		private DataGridView dataGridView = new DataGridView();
 
 		public Form1()
 		{
@@ -24,19 +24,11 @@ namespace kenpo31GenerationTool
 		{
 			dataGridView = new DataGridView
 			{
-				// フォーム全体を使う
-				Dock = DockStyle.Fill
+				Location = new Point(50, 150),  // 任意の座標に配置
+				Size = new Size(700, 200),  // DataGridViewのサイズを指定
+				Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right  // サイズの自動調整
 			};
 			this.Controls.Add(dataGridView);
-
-			// 各コンポーネントの配置を設定
-			txtFilePath.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-
-			btnBrowse.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-
-			btnOK.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-
-			btnConvert.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
 
 			// フォームロード時にプレースホルダを設定
 			SetPlaceholder();
