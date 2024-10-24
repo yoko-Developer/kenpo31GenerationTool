@@ -37,8 +37,6 @@ namespace kenpo31GenerationTool
 			this.btnConvert = new System.Windows.Forms.Button();
 			this.lblFilePath = new System.Windows.Forms.Label();
 			this.btnOK = new System.Windows.Forms.Button();
-			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// txtFilePath
@@ -46,10 +44,10 @@ namespace kenpo31GenerationTool
 			this.txtFilePath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.txtFilePath.ForeColor = System.Drawing.Color.Gray;
-			this.txtFilePath.Location = new System.Drawing.Point(78, 51);
+			this.txtFilePath.Location = new System.Drawing.Point(83, 61);
 			this.txtFilePath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.txtFilePath.Name = "txtFilePath";
-			this.txtFilePath.Size = new System.Drawing.Size(285, 19);
+			this.txtFilePath.Size = new System.Drawing.Size(462, 19);
 			this.txtFilePath.TabIndex = 0;
 			this.txtFilePath.Text = "FI_JRK_0004.csv のパスを入力または参照してください";
 			this.txtFilePath.TextChanged += new System.EventHandler(this.txtFilePath_TextChanged);
@@ -59,10 +57,10 @@ namespace kenpo31GenerationTool
 			// btnBrowse
 			// 
 			this.btnBrowse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnBrowse.Location = new System.Drawing.Point(625, 47);
+			this.btnBrowse.Location = new System.Drawing.Point(594, 58);
 			this.btnBrowse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnBrowse.Name = "btnBrowse";
-			this.btnBrowse.Size = new System.Drawing.Size(75, 23);
+			this.btnBrowse.Size = new System.Drawing.Size(90, 28);
 			this.btnBrowse.TabIndex = 1;
 			this.btnBrowse.Text = "参照";
 			this.btnBrowse.UseVisualStyleBackColor = true;
@@ -74,7 +72,7 @@ namespace kenpo31GenerationTool
 			this.btnConvert.Location = new System.Drawing.Point(610, 359);
 			this.btnConvert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnConvert.Name = "btnConvert";
-			this.btnConvert.Size = new System.Drawing.Size(90, 32);
+			this.btnConvert.Size = new System.Drawing.Size(90, 28);
 			this.btnConvert.TabIndex = 3;
 			this.btnConvert.Text = "変換開始";
 			this.btnConvert.UseVisualStyleBackColor = true;
@@ -83,7 +81,7 @@ namespace kenpo31GenerationTool
 			// lblFilePath
 			// 
 			this.lblFilePath.AutoSize = true;
-			this.lblFilePath.Location = new System.Drawing.Point(75, 21);
+			this.lblFilePath.Location = new System.Drawing.Point(80, 30);
 			this.lblFilePath.Name = "lblFilePath";
 			this.lblFilePath.Size = new System.Drawing.Size(253, 13);
 			this.lblFilePath.TabIndex = 4;
@@ -93,31 +91,19 @@ namespace kenpo31GenerationTool
 			// btnOK
 			// 
 			this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnOK.Location = new System.Drawing.Point(723, 47);
+			this.btnOK.Location = new System.Drawing.Point(701, 58);
 			this.btnOK.Name = "btnOK";
-			this.btnOK.Size = new System.Drawing.Size(75, 23);
+			this.btnOK.Size = new System.Drawing.Size(90, 28);
 			this.btnOK.TabIndex = 2;
 			this.btnOK.Text = "OK";
 			this.btnOK.UseVisualStyleBackColor = true;
 			this.btnOK.Click += new System.EventHandler(this.BtnOk_Click);
-			// 
-			// dataGridView1
-			// 
-			this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(268, 105);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.RowHeadersWidth = 72;
-			this.dataGridView1.RowTemplate.Height = 21;
-			this.dataGridView1.Size = new System.Drawing.Size(530, 209);
-			this.dataGridView1.TabIndex = 5;
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(846, 428);
-			this.Controls.Add(this.dataGridView1);
 			this.Controls.Add(this.lblFilePath);
 			this.Controls.Add(this.btnConvert);
 			this.Controls.Add(this.btnBrowse);
@@ -127,12 +113,9 @@ namespace kenpo31GenerationTool
 			this.Name = "Form1";
 			this.Text = "KENPO31 ファイル変換ツール";
 			this.Load += new System.EventHandler(this.Form1_Load);
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
 		}
-
-		private DataGridView dataGridView1;
 	}
 }
