@@ -74,7 +74,7 @@ namespace kenpo31GenerationTool.csvHandling
 							NonParticipantFlag = fields[25],
 							NonParticipantReason = fields[26]
 						};
-						
+
 						// バリデーションチェック
 						if (!ValidateRecord(fields))
 						{

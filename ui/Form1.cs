@@ -114,7 +114,7 @@ namespace kenpo31GenerationTool
 		/// </summary>
 		private void BtnConvert_Click(object sender, EventArgs e)
 		{
-			
+
 			string filePath = txtFilePath.Text;
 
 			if (string.IsNullOrEmpty(filePath) || filePath == "FI_JRK_0004.csv のパスを入力または参照してください")
@@ -176,6 +176,17 @@ namespace kenpo31GenerationTool
 		}
 
 		/// <summary>
+		/// DB接続ボタンがクリックされたときに呼び出されるイベントハンドラ
+		/// </summary>
+		/// <param name="sender">イベントをトリガーしたオブジェクト</param>
+		/// <param name="e">イベントデータ</param>
+		private void BtnConnect_Click(object sender, EventArgs e)
+		{
+			// ボタンがクリックされたときの処理をここに記述します
+			MessageBox.Show("接続ボタンがクリックされました。");
+		}
+
+		/// <summary>
 		/// プレースホルダの設定
 		/// </summary>
 		private void SetPlaceholder()
@@ -190,7 +201,7 @@ namespace kenpo31GenerationTool
 		/// <summary>
 		/// テキストボックスにフォーカスが入ったときにプレースホルダをクリア
 		/// </summary>
-		private void txtFilePath_Enter(object sender, EventArgs e)
+		private void TxtFilePath_Enter(object sender, EventArgs e)
 		{
 			if (txtFilePath.Text == "FI_JRK_0004.csv のパスを入力または参照してください")
 			{
@@ -202,7 +213,7 @@ namespace kenpo31GenerationTool
 		/// <summary>
 		/// テキストボックスからフォーカスが外れたときにプレースホルダを再表示
 		/// </summary>
-		private void txtFilePath_Leave(object sender, EventArgs e)
+		private void TxtFilePath_Leave(object sender, EventArgs e)
 		{
 			if (string.IsNullOrWhiteSpace(txtFilePath.Text))
 			{
@@ -210,12 +221,12 @@ namespace kenpo31GenerationTool
 			}
 		}
 
-		private void txtFilePath_TextChanged(object sender, EventArgs e)
+		private void TxtFilePath_TextChanged(object sender, EventArgs e)
 		{
 
 		}
 
-		private void lblFilePath_Click(object sender, EventArgs e)
+		private void LblFilePath_Click(object sender, EventArgs e)
 		{
 
 		}
