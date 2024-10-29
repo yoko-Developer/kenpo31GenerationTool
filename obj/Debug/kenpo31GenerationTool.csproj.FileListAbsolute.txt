@@ -19,6 +19,7 @@ C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\bin\Debug\S
 C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.csproj.AssemblyReference.cache
 C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.Properties.Resources.resources
+C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.ui.DBConnectionForm.resources
 C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.Form1.resources
 C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.csproj.GenerateResource.cache
 C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.csproj.CoreCompileInputs.cache

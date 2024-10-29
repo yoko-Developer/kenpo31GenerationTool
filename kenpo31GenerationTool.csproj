@@ -75,6 +75,12 @@
     <Compile Include="dataAccess\CsvRecord.cs" />
     <Compile Include="dataAccess\SqlQueries.cs" />
     <Compile Include="models\FI_JRK_0004Model.cs" />
+    <Compile Include="ui\DBConnectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\DBConnectionForm.Designer.cs">
+      <DependentUpon>DBConnectionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ui\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ui\DBConnectionForm.resx">
+      <DependentUpon>DBConnectionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ui\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
