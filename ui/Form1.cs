@@ -1,4 +1,5 @@
 ﻿using kenpo31GenerationTool.csvHandling; // CsvReaderの名前空間
+using kenpo31GenerationTool.ui;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -182,8 +183,9 @@ namespace kenpo31GenerationTool
 		/// <param name="e">イベントデータ</param>
 		private void BtnConnect_Click(object sender, EventArgs e)
 		{
-			// ボタンがクリックされたときの処理をここに記述します
-			MessageBox.Show("接続ボタンがクリックされました。");
+			// DB接続フォームを開く
+			DBConnectionForm dbConnectionForm = new DBConnectionForm();
+			dbConnectionForm.Show();
 		}
 
 		/// <summary>
