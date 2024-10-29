@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CsvHelper.Configuration.Attributes;
+using System;
 
 namespace kenpo31GenerationTool.csvHandling
 {
@@ -8,85 +9,112 @@ namespace kenpo31GenerationTool.csvHandling
 	public class CsvRecord
 	{
 		// 要求レコード番号
-		public string RecordNumber { get; set; } = "";
+		[Name("要求レコード番号")]
+		public string RecordNumber { get; set; }
 
 		// 個人番号
-		public string PersonalNumber { get; set; } = "";
+		[Name("個人番号")]
+		public string PersonalNumber { get; set; }
 
 		// 照会結果氏名
-		public string Name { get; set; } = "";
+		[Name("照会結果氏名")]
+		public string Name { get; set; }
 
 		// 照会結果氏名かな
-		public string KanaName { get; set; } = "";
+		[Name("照会結果氏名かな")]
+		public string KanaName { get; set; }
 
 		// 照会結果生年月日
-		public string Birthdate { get; set; } = "";
+		[Name("照会結果生年月日")]
+		public string Birthdate { get; set; }
 
 		// 照会結果性別コード(1: 男, 2: 女)
-		public string GenderCode { get; set; } = "";
+		[Name("照会結果性別コード")]
+		public string GenderCode { get; set; }
 
 		// 照会結果性別
-		public string Gender { get; set; } = "";
+		[Name("照会結果性別")]
+		public string Gender { get; set; }
 
 		// 照会結果住所
-		public string Address { get; set; } = "";
+		[Name("照会結果住所")]
+		public string Address { get; set; }
 
 		// 市町村コード（5桁）
-		public string MunicipalityCode { get; set; } = "";
+		[Name("市町村コード")]
+		public string MunicipalityCode { get; set; }
 
 		// 対象者識別情報
-		public string Identifier { get; set; } = "";
+		[Name("対象者識別情報")]
+		public string Identifier { get; set; }
 
 		// 照会処理結果コード
-		public string ProcessingResultCode { get; set; } = "";
+		[Name("照会処理結果コード")]
+		public string ProcessingResultCode { get; set; }
 
 		// 照会処理結果
-		public string ProcessingResult { get; set; } = "";
+		[Name("照会処理結果")]
+		public string ProcessingResult { get; set; }
 
 		// 照会結果レコード数
-		public string RecordCount { get; set; } = "";
+		[Name("照会結果レコード数")]
+		public string RecordCount { get; set; }
 
 		// 照会結果レコード連番
-		public string RecordSequenceNumber { get; set; } = "";
+		[Name("照会結果レコード連番")]
+		public string RecordSequenceNumber { get; set; }
 
 		// 異動有無コード
-		public string MovementCode { get; set; } = "";
+		[Name("異動有無コード")]
+		public string MovementCode { get; set; }
 
 		// 異動有無
-		public string Movement { get; set; } = "";
+		[Name("異動有無")]
+		public string Movement { get; set; }
 
 		// 生存状況コード
-		public string LifeStatusCode { get; set; } = "";
+		[Name("生存状況コード")]
+		public string LifeStatusCode { get; set; }
 
 		// 生存状況
-		public string LifeStatus { get; set; } = "";	
+		[Name("生存状況")]
+		public string LifeStatus { get; set; }
 
-		// 変更状況コード	
-		public string ChangeStatusCode { get; set; } = "";
+		// 変更状況コード
+		[Name("変更状況コード")]
+		public string ChangeStatusCode { get; set; }
 
 		// 変更状況
-		public string ChangeStatus { get; set; } = "";
+		[Name("変更状況")]
+		public string ChangeStatus { get; set; }
 
 		// 異動事由コード
-		public string MovementReasonCode { get; set; } = "";
+		[Name("異動事由コード")]
+		public string MovementReasonCode { get; set; }
 
 		// 異動事由
-		public string MovementReason { get; set; } = "";
+		[Name("異動事由")]
+		public string MovementReason { get; set; }
 
-		// 異動年月日	
-		public string MovementDate { get; set; } = "";
+		// 異動年月日
+		[Name("異動年月日")]
+		public string MovementDate { get; set; }
 
 		// 照会結果氏名外字数
-		public string NameGaijiCount { get; set; } = "";
+		[Name("照会結果氏名外字数")]
+		public string NameGaijiCount { get; set; }
 
 		// 照会結果住所外字数
-		public string AddressGaijiCount { get; set; } = "";
+		[Name("照会結果住所外字数")]
+		public string AddressGaijiCount { get; set; }
 
 		// 不参加団体対象フラグ
-		public string NonParticipantFlag { get; set; } = "";
+		[Name("不参加団体対象フラグ")]
+		public string NonParticipantFlag { get; set; }
 
 		// 不参加団体対象要因
-		public string NonParticipantReason { get; set; } = "";
+		[Name("不参加団体対象要因")]
+		public string NonParticipantReason { get; set; }
 
 		/// <summary>
 		/// CsvRecordを文字列配列に変換するメソッド

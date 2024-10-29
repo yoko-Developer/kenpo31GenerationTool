@@ -13,6 +13,7 @@ namespace kenpo31GenerationTool
 		private System.Windows.Forms.Button btnConvert;
 		private System.Windows.Forms.Label lblFilePath;
 		private System.Windows.Forms.Button btnOK;
+		private System.Windows.Forms.Button btnConnect;
 
 		/// <summary>
 		/// 使用中のリソースをすべてクリーンアップします。
@@ -37,6 +38,7 @@ namespace kenpo31GenerationTool
 			this.btnConvert = new System.Windows.Forms.Button();
 			this.lblFilePath = new System.Windows.Forms.Label();
 			this.btnOK = new System.Windows.Forms.Button();
+			this.btnConnect = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// txtFilePath
@@ -50,9 +52,9 @@ namespace kenpo31GenerationTool
 			this.txtFilePath.Size = new System.Drawing.Size(462, 19);
 			this.txtFilePath.TabIndex = 0;
 			this.txtFilePath.Text = "FI_JRK_0004.csv のパスを入力または参照してください";
-			this.txtFilePath.TextChanged += new System.EventHandler(this.txtFilePath_TextChanged);
-			this.txtFilePath.Enter += new System.EventHandler(this.txtFilePath_Enter);
-			this.txtFilePath.Leave += new System.EventHandler(this.txtFilePath_Leave);
+			this.txtFilePath.TextChanged += new System.EventHandler(this.TxtFilePath_TextChanged);
+			this.txtFilePath.Enter += new System.EventHandler(this.TxtFilePath_Enter);
+			this.txtFilePath.Leave += new System.EventHandler(this.TxtFilePath_Leave);
 			// 
 			// btnBrowse
 			// 
@@ -78,7 +80,7 @@ namespace kenpo31GenerationTool
 			this.btnConvert.UseVisualStyleBackColor = true;
 			this.btnConvert.Click += new System.EventHandler(this.BtnConvert_Click);
 			// 
-			// lblFilePath
+			// LblFilePath
 			// 
 			this.lblFilePath.AutoSize = true;
 			this.lblFilePath.Location = new System.Drawing.Point(80, 30);
@@ -86,7 +88,7 @@ namespace kenpo31GenerationTool
 			this.lblFilePath.Size = new System.Drawing.Size(253, 13);
 			this.lblFilePath.TabIndex = 4;
 			this.lblFilePath.Text = "FI_JRK_0004.csv ファイルを選択してください　※";
-			this.lblFilePath.Click += new System.EventHandler(this.lblFilePath_Click);
+			this.lblFilePath.Click += new System.EventHandler(this.LblFilePath_Click);
 			// 
 			// btnOK
 			// 
@@ -99,6 +101,17 @@ namespace kenpo31GenerationTool
 			this.btnOK.UseVisualStyleBackColor = true;
 			this.btnOK.Click += new System.EventHandler(this.BtnOk_Click);
 			// 
+			// btnConnect
+			// 
+			this.btnConnect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.btnConnect.Location = new System.Drawing.Point(80, 359);
+			this.btnConnect.Size = new System.Drawing.Size(90, 28);
+			this.btnConnect.TabIndex = 4;
+			this.btnConnect.Text = "DB接続";
+			this.btnConnect.BackColor = System.Drawing.Color.LightGreen;
+			this.btnConnect.UseVisualStyleBackColor = false;
+			this.btnConnect.Click += new System.EventHandler(this.BtnConnect_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -108,6 +121,7 @@ namespace kenpo31GenerationTool
 			this.Controls.Add(this.btnConvert);
 			this.Controls.Add(this.btnBrowse);
 			this.Controls.Add(this.btnOK);
+			this.Controls.Add(this.btnConnect);
 			this.Controls.Add(this.txtFilePath);
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.Name = "Form1";
