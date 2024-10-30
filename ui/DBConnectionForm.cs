@@ -61,32 +61,20 @@ namespace kenpo31GenerationTool.ui
 						adapterKA12.Fill(tableKA12);
 						adapterAddress.Fill(tableAddress);
 
-						// 各テーブルのデータをモーダルフォームで表示
-						ShowTableData("KA11LICH", tableKA11);
-						ShowTableData("KA12LICF", tableKA12);
-						ShowTableData("KAFIJADL", tableAddress);
+						// 各テーブルのデータをタブ表示するためのフォームを開く
+
+						using (var viewerForm = new TableDataViewerForm(tableKA11, tableKA12, tableAddress))
+						{
+								viewerForm.ShowDialog();
+							}
+						}
+					}
+					catch (Exception ex)
+					{
+						MessageBox.Show($"接続に失敗しました: {ex.Message}", "接続エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					}
 				}
-				catch (Exception ex)
-				{
-					MessageBox.Show($"接続に失敗しました: {ex.Message}", "接続エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				}
 			}
-		}
-
-		/// <summary>
-		/// 指定されたテーブルのデータを TableDataViewerForm で表示
-		/// </summary>
-		/// <param name="tableName">表示するテーブルの名前</param>
-		/// <param name="tableData">表示するテーブルデータ</param>
-		private void ShowTableData(string tableName, DataTable tableData)
-		{
-			using (var viewerForm = new TableDataViewerForm(tableName, tableData))
-			{
-				viewerForm.ShowDialog(); // モーダルで表示
-
-			}
-		}
 
 		/// <summary>	
 		/// 戻るボタンの処理でフォームを閉じて前の画面に戻る	
@@ -94,11 +82,6 @@ namespace kenpo31GenerationTool.ui
 		private void BtnBack_Click(object sender, EventArgs e)
 {
 			this.Close();
-		}
-
-		private void TxtPassword_TextChanged(object sender, EventArgs e)
-		{
-
 		}
 
 		private void DBConnectionForm_Load(object sender, EventArgs e)

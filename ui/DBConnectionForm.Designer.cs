@@ -131,7 +131,7 @@
 			this.txtPassword.Size = new System.Drawing.Size(370, 19);
 			this.txtPassword.TabIndex = 8;
 			this.txtPassword.UseSystemPasswordChar = true;
-			this.txtPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
+//			this.txtPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
 			// 
 			// btnConnect
 			// 
