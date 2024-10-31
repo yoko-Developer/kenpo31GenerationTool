@@ -62,24 +62,31 @@ namespace kenpo31GenerationTool
 		/// <param name="records">読み込んだCSVのレコードリスト</param>
 		private void DisplayCsvData(List<string[]> records)
 		{
-			var dataTable = new DataTable();
-			if (records.Count > 0)
-			{
-				// ヘッダー行を追加
-				for (int i = 0; i < records[0].Length; i++)
-				{
-					dataTable.Columns.Add($"Column{i + 1}");
-				}
+			if (records.Count < 1) { return; }
 
-				// データ行を追加
-				foreach (var record in records)
+			var dataTable = new DataTable();
+			// 1行目
+			var row = 0;
+
+			// データ行を追加
+			foreach (var record in records)
+			{
+				if (row == 0)
 				{
+					for (int j = 0; j < record.Length; j++) {
+						{
+							dataTable.Columns.Add(record[j].ToString());
+						}
+					}
+				}
+				else
+				{ 
 					dataTable.Rows.Add(record);
 				}
+				row++;
 			}
-			dataGridView.DataSource = dataTable;
-		}
-
+		dataGridView.DataSource = dataTable;
+	}
 
 		/// <summary>
 		/// OKボタンをクリックした際のイベントハンドラ
