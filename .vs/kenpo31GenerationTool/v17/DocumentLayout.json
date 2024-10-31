@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\y-morioka\\Documents\\myWork\\develop\\C#\\kenpo31GenerationTool\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F544B5A2-EA03-4892-8B47-1443622AF2C9}|kenpo31GenerationTool.csproj|C:\\Users\\y-morioka\\Documents\\myWork\\develop\\C#\\kenpo31GenerationTool\\ui\\dbconnectionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F544B5A2-EA03-4892-8B47-1443622AF2C9}|kenpo31GenerationTool.csproj|solutionrelative:ui\\dbconnectionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F544B5A2-EA03-4892-8B47-1443622AF2C9}|kenpo31GenerationTool.csproj|C:\\Users\\y-morioka\\Documents\\myWork\\develop\\C#\\kenpo31GenerationTool\\ui\\tabledataviewerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F544B5A2-EA03-4892-8B47-1443622AF2C9}|kenpo31GenerationTool.csproj|solutionrelative:ui\\tabledataviewerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F544B5A2-EA03-4892-8B47-1443622AF2C9}|kenpo31GenerationTool.csproj|c:\\users\\y-morioka\\documents\\mywork\\develop\\c#\\kenpo31generationtool\\ui\\dbconnectionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F544B5A2-EA03-4892-8B47-1443622AF2C9}|kenpo31GenerationTool.csproj|solutionrelative:ui\\dbconnectionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F544B5A2-EA03-4892-8B47-1443622AF2C9}|kenpo31GenerationTool.csproj|C:\\Users\\y-morioka\\Documents\\myWork\\develop\\C#\\kenpo31GenerationTool\\ui\\tabledataviewerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -23,7 +23,7 @@
       "RelativeMoniker": "D:0:0:{F544B5A2-EA03-4892-8B47-1443622AF2C9}|kenpo31GenerationTool.csproj|solutionrelative:ui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F544B5A2-EA03-4892-8B47-1443622AF2C9}|kenpo31GenerationTool.csproj|c:\\users\\y-morioka\\documents\\mywork\\develop\\c#\\kenpo31generationtool\\dataaccess\\csvreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F544B5A2-EA03-4892-8B47-1443622AF2C9}|kenpo31GenerationTool.csproj|C:\\Users\\y-morioka\\Documents\\myWork\\develop\\C#\\kenpo31GenerationTool\\dataaccess\\csvreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F544B5A2-EA03-4892-8B47-1443622AF2C9}|kenpo31GenerationTool.csproj|solutionrelative:dataaccess\\csvreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -66,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,31 +86,30 @@
               "RelativeToolTip": "README.md",
               "ViewState": "AQIAAB4AAAAAAAAAAAAewDQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2024-10-22T06:23:38.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-22T06:23:38.6Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "DBConnectionForm.cs",
               "DocumentMoniker": "C:\\Users\\y-morioka\\Documents\\myWork\\develop\\C#\\kenpo31GenerationTool\\ui\\DBConnectionForm.cs",
               "RelativeDocumentMoniker": "ui\\DBConnectionForm.cs",
               "ToolTip": "C:\\Users\\y-morioka\\Documents\\myWork\\develop\\C#\\kenpo31GenerationTool\\ui\\DBConnectionForm.cs",
               "RelativeToolTip": "ui\\DBConnectionForm.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAApwDcAAAAGAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-29T06:24:46.937Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "TableDataViewerForm.cs",
               "DocumentMoniker": "C:\\Users\\y-morioka\\Documents\\myWork\\develop\\C#\\kenpo31GenerationTool\\ui\\TableDataViewerForm.cs",
               "RelativeDocumentMoniker": "ui\\TableDataViewerForm.cs",
               "ToolTip": "C:\\Users\\y-morioka\\Documents\\myWork\\develop\\C#\\kenpo31GenerationTool\\ui\\TableDataViewerForm.cs",
               "RelativeToolTip": "ui\\TableDataViewerForm.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAiwD8AAAACAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAB8AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T01:14:25.813Z",
               "EditorCaption": ""
@@ -137,8 +136,7 @@
               "RelativeToolTip": "ui\\Form1.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAADwvw0AAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T05:12:59.88Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-22T05:12:59.88Z"
             },
             {
               "$type": "Document",
@@ -150,8 +148,7 @@
               "RelativeToolTip": "dataAccess\\CsvReader.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAmwCAAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T06:22:39.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-22T06:22:39.849Z"
             },
             {
               "$type": "Document",
@@ -163,8 +160,7 @@
               "RelativeToolTip": "ui\\DBConnectionForm.Designer.cs",
               "ViewState": "AQIAAHgAAAAAAAAAAAAgwIUAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T02:08:24.111Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-30T02:08:24.111Z"
             },
             {
               "$type": "Document",
@@ -188,8 +184,7 @@
               "ToolTip": "C:\\Users\\y-morioka\\Documents\\myWork\\develop\\C#\\kenpo31GenerationTool\\ui\\DBConnectionForm.cs [\u30C7\u30B6\u30A4\u30F3]",
               "RelativeToolTip": "ui\\DBConnectionForm.cs [\u30C7\u30B6\u30A4\u30F3]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T06:24:41.571Z",
-              "EditorCaption": " [\u30C7\u30B6\u30A4\u30F3]"
+              "WhenOpened": "2024-10-29T06:24:41.571Z"
             },
             {
               "$type": "Document",
@@ -201,8 +196,7 @@
               "RelativeToolTip": "dataAccess\\SqlQueries.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T13:27:07.561Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-27T13:27:07.561Z"
             },
             {
               "$type": "Document",
@@ -213,8 +207,7 @@
               "ToolTip": "C:\\Users\\y-morioka\\Documents\\myWork\\develop\\C#\\kenpo31GenerationTool\\ui\\Form1.cs [\u30C7\u30B6\u30A4\u30F3]",
               "RelativeToolTip": "ui\\Form1.cs [\u30C7\u30B6\u30A4\u30F3]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T05:12:58.165Z",
-              "EditorCaption": " [\u30C7\u30B6\u30A4\u30F3]"
+              "WhenOpened": "2024-10-22T05:12:58.165Z"
             },
             {
               "$type": "Document",
@@ -226,8 +219,7 @@
               "RelativeToolTip": "dataAccess\\CsvRecord.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T06:27:02.159Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-22T06:27:02.159Z"
             },
             {
               "$type": "Document",
@@ -239,8 +231,7 @@
               "RelativeToolTip": "models\\FI_JRK_0004Model.cs",
               "ViewState": "AQIAAGoAAAAAAAAAAAAMwHsAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T07:31:57.598Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-22T07:31:57.598Z"
             },
             {
               "$type": "Document",
@@ -252,8 +243,7 @@
               "RelativeToolTip": "packages.config",
               "ViewState": "AQIAAAAAAAAAAAAAAAA8wAIAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-10-23T03:18:48.08Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T03:18:48.08Z"
             }
           ]
         }
