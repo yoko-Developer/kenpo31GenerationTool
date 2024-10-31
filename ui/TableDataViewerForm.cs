@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace kenpo31GenerationTool.ui
@@ -26,7 +20,7 @@ namespace kenpo31GenerationTool.ui
 		public TableDataViewerForm(DataTable tableKA11, DataTable tableKA12, DataTable tableAddress)
 		{
 			InitializeComponent();
-			
+
 			// フォームのタイトル設定
 			this.Text = "データベーステーブルのデータ表示";
 
