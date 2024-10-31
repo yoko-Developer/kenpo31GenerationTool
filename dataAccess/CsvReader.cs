@@ -32,13 +32,6 @@ namespace kenpo31GenerationTool.csvHandling
 					while ((line = sr.ReadLine()) != null)
 					{
 
-						// 1行目はヘッダとしてスキップ
-						if (row == 0)
-						{
-							row++;
-							continue;
-						}
-
 						// 各行カンマで分割
 						string[] fields = line.Split(',');
 
