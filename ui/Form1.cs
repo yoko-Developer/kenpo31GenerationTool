@@ -73,20 +73,21 @@ namespace kenpo31GenerationTool
 			{
 				if (row == 0)
 				{
-					for (int j = 0; j < record.Length; j++) {
+					for (int j = 0; j < record.Length; j++)
+					{
 						{
 							dataTable.Columns.Add(record[j].ToString());
 						}
 					}
 				}
 				else
-				{ 
+				{
 					dataTable.Rows.Add(record);
 				}
 				row++;
 			}
-		dataGridView.DataSource = dataTable;
-	}
+			dataGridView.DataSource = dataTable;
+		}
 
 		/// <summary>
 		/// OKボタンをクリックした際のイベントハンドラ
