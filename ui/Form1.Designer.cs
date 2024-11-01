@@ -43,8 +43,8 @@ namespace kenpo31GenerationTool
 			// 
 			// txtFilePath
 			// 
-			this.txtFilePath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.txtFilePath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.txtFilePath.ForeColor = System.Drawing.Color.Gray;
 			this.txtFilePath.Location = new System.Drawing.Point(83, 61);
 			this.txtFilePath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

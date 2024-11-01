@@ -1,3 +1,10 @@
+C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.csproj.AssemblyReference.cache
+C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.Properties.Resources.resources
+C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.ui.DBConnectionForm.resources
+C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.Form1.resources
+C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.ui.TableDataViewerForm.resources
+C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.csproj.GenerateResource.cache
+C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.csproj.CoreCompileInputs.cache
 C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\bin\Debug\kenpo31GenerationTool.exe.config
 C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\bin\Debug\kenpo31GenerationTool.exe
 C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\bin\Debug\kenpo31GenerationTool.pdb
@@ -17,13 +24,6 @@ C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\bin\Debug\S
 C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.csproj.AssemblyReference.cache
-C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.Properties.Resources.resources
-C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.ui.DBConnectionForm.resources
-C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.Form1.resources
-C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.ui.TableDataViewerForm.resources
-C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.csproj.GenerateResource.cache
-C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.csproj.CoreCompileInputs.cache
 C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31G.C77164C6.Up2Date
 C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.exe
 C:\Users\y-morioka\Documents\myWork\develop\C#\kenpo31GenerationTool\obj\Debug\kenpo31GenerationTool.pdb
